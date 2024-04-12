@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+    <head>
+        <title>Gallery</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>.navbar{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color:rgba(0,0,0,0.5);
+            position:sticky;
+            top:0;
+        }
+        
+        .span{
+            color:aqua;
+        }
+        
+        .navbar ul{
+            display:flex;
+            list-style:none;
+            margin:20px 0px;
+        }
+        
+        .navbar ul li{
+            font-family:century;
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+        
+        .navbar ul li a{
+            text-decoration:none;
+            color:white;
+            padding:8px 25px;
+            transition:all .5s ease;
+        }
+        
+        .navbar ul li a:hover{
+            background-color:red;
+            color:black;
+            box-shadow: 0 0 10px red;
+        }
+
+        .gallery{
+            margin-left:60px;
+        }
+        .gallery h1{
+            text-align: center;
+            color:red;
+        }
+
+
+        .gallery img{
+        margin-left:30px;
+        margin-top:20px;
+        cursor:pointer;
+        }
+
+        .gallery img:hover{
+            border-radius:20px;
+            box-shadow:0 32px 7px  rgb(249, 36, 36,0.2);
+        }
+
+        footer{
+    background-color:#111;
+}
+
+.footercont{
+    width:100%;
+    padding:70px 30px 20px;
+}
+
+.icons{
+    display:flex;
+    justify-content:center;
+}
+
+.icons a i{
+    font-size:2em;
+    color:white;
+    opacity:0.9; 
+}
+
+.items a:hover{
+    background-color: red;
+    transition:0.5s;
+}
+
+
+.items a:hover i{
+    color:red;
+    transition:0.5s;
+}
+
+        .footernav{
+        margin:30px 0;
+         }
+
+    .footernav ul{
+    display:flex;
+    justify-content:center;
+    }
+
+
+    .footernav ul li{
+    display:flex;
+    justify-content:center;
+    }
+
+    .footernav ul li a{
+    color:white;
+    margin:20px;
+    text-decoration:none;
+    font-size:1.3rem;
+    opacity:0.7;
+    transition:0.5s;
+    }
+
+    .footerbottom{
+    background-color: #000;
+    padding:20px;
+    text-align:center;
+    }
+
+    .footerbottom p{
+    color:white;
+    
+    }
+
+            </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="myworks.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="gallery">
+            <h1>My Photography</h1>
+            <div class="gallery">
+            <A HREF="img1.png"	TARGET="_blank"><img src="img1.png" width="400px" height="500px"></A>
+            <A HREF="img2.png"	TARGET="_blank"><img src="img2.png"width="400px" height="500px"></A>
+            <A HREF="img3.png"	TARGET="_blank"><img src="img3.png"width="400px" height="500px"></a>
+            <A HREF="img4.png"	TARGET="_blank"><img src="img4.png"width="400px" height="500px"></a>
+            <A HREF="img5.png"	TARGET="_blank"><img src="img5.png"width="400px" height="500px"></a>
+            <A HREF="img6.png"	TARGET="_blank"><img src="img6.png"width="400px" height="500px"></a>
+            </div>
+
+        <footer>
+            <div class="footercont">
+                <div class="icons">
+                    <a href="https://www.facebook.com/aryan.guragain.77"><i class="fa-brands fa-facebook"></i></a>&copy;
+                    <a href="https://www.instagram.com/aryan_guragain/"><i class="fa-brands fa-instagram"></i></a>&copy;
+                    <a href="https://github.com/AryanGuragain"><i class="fa-brands fa-github"></i></a>&copy;
+                    <a href="https://www.linkedin.com/in/aryan-guragain-57026328a/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="footernav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="myworks.html">Works</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerbottom">
+                <p>Copyright &copy; 2024; Designed by <span class="name">ARYAN</span><br>
+                For more queries.<a href= "mailto: aryanguragain007@email.com"> Mail us</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

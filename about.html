@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+        }
+
+        .navbar ul li {
+            font-family: century;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 25px;
+            transition: all .5s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: red;
+            color: black;
+            box-shadow: 0 0 10px red;
+        }
+
+        .featured-image {
+            display: flex;
+            justify-content: left;
+            align-content: left;
+            min-height: 80vh;
+            width: 50%;
+        }
+
+        .image {
+            margin-left:20px;
+            margin: auto 0;
+            width: 380px;
+            height: 380px;
+            border-radius: 55% 45% 55% 45%;
+            overflow: hidden;
+            animation: imgFloat 7s ease-in-out infinite;
+        }
+
+        .image img {
+            width: 380px;
+            height: 380px;
+            object-fit: cover;
+        }
+
+        .about {
+            width:700px;
+            flex: 1; /* Added flex property to allow text to fill remaining space */
+            padding: 20px; /* Added padding for spacing */
+            color: white;
+            background-color: red;
+            border-radius:20px;
+            text-align: right;
+            margin-left:700px;
+            margin-top:-500px; /* Align text to the right */
+            }
+
+        .about h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }   
+
+        .about p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .container{
+            width:100%;
+            min-height:100vh;
+            padding:30px 10%;
+            margin-top:
+        }
+
+        .container .subtitle{
+            max-width:700px;
+            margin:0px auto;
+            text-align:center;
+            font-family: Helvetica;
+        }
+
+        .container .maintitle h1{
+            position:relative;
+            font-size:40px;
+            color:#242223;
+            margin-bottom:30px;
+            display:inline-block;
+        }
+    
+        #skill-section{
+            width:100%;
+            height:auto;
+            padding:80px 13%;
+            background-color: rgba(0,0,0,0.080);
+            margin-top: 150px;
+        }
+
+        .myskills{
+            width:100%;
+            margin-bottom:70px;
+            display:grid;
+            place-items:center;
+            text-align:center;
+        }
+        
+        .skill-main{
+            width:100%;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-column-gap: 50px;
+        }
+
+        .skill-main .skill-progress .info{
+            display:flex;
+            justify-content:space-between;
+            padding:0 10px;
+        }
+
+        .skill-progress .bar {
+            width:100%;
+            height:10px;
+            position:relative;
+            background-color:rgba(0,0,0,0.199);
+            border-radius:25px;
+            margin-top:5px;
+        }
+
+        .skill-progress .bar span {
+    height: 100%;
+    position: absolute;
+    background-color: red;
+    border-radius: 25px;
+    width: 0; /* Set initial width to 0 */
+    transition: width 1s ease; /* Add transition for smooth animation */
+}
+
+.skill-progress .bar span.html {
+    width: 90%; /* Example: 90% for HTML */
+}
+
+.skill-progress .bar span.css {
+    width: 80%; /* Example: 80% for CSS */
+}
+
+.skill-progress .bar span.js {
+    width: 55%; /* Example: 55% for JavaScript */
+}
+
+.skill-progress .bar span.figma {
+    width: 90%; /* Example: 90% for Figma */
+}
+
+.skill-progress .bar span.ps {
+    width: 90%; /* Example: 90% for Photoshop */
+}
+
+.skill-progress .bar span.ai {
+    width: 70%; /* Example: 70% for Illustrator */
+}
+
+.skill-progress .bar span.python {
+    width: 70%; /* Example: 70% for Python */
+}
+
+.skill-progress .bar span.cpp {
+    width: 68%; /* Example: 68% for C++ */
+}
+
+footer{
+    background-color:#111;
+}
+
+.footercont{
+    width:100%;
+    padding:70px 30px 20px;
+}
+
+.icons{
+    display:flex;
+    justify-content:center;
+}
+
+.icons a i{
+    font-size:2em;
+    color:white;
+    opacity:0.9; 
+}
+
+.items a:hover{
+    background-color: red;
+    transition:0.5s;
+}
+
+
+.items a:hover i{
+    color:red;
+    transition:0.5s;
+}
+
+.footernav{
+    margin:30px 0;
+}
+
+.footernav ul{
+    display:flex;
+    justify-content:center;
+}
+
+
+.footernav ul li{
+    display:flex;
+    justify-content:center;
+}
+
+.footernav ul li a{
+    color:white;
+    margin:20px;
+    text-decoration:none;
+    font-size:1.3rem;
+    opacity:0.7;
+    transition:0.5s;
+}
+
+.footerbottom{
+    background-color: #000;
+    padding:20px;
+    text-align:center;
+}
+
+.footerbottom p{
+    color:white;
+    
+}
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="myworks.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="featured-image">
+    <div class="image">
+        <img src="pfp.jpg" alt="Profile Picture">
+    </div>
+</div>
+<div class="about">
+    <h1>About Me</h1>
+    <p>Hi! I'm Aryan Guragain, an 18-year-old aspiring designer with a passion for turning ideas into visuals.
+        I'm proficient in design tools like Figma, Photoshop, and Illustrator, allowing me to craft compelling graphics and user interfaces. My
+        coding skills in C++, Python, HTML, CSS, and JavaScript further enhance my ability to bring designs to life.
+        I'm always eager to learn and push my creative boundaries!</p>
+</div>
+<section id="skill-section">
+<div class="myskills">
+    <h1>My skills</h1>
+    <p>In my one-year of learning journey these are the following skills I have gained</p>
+</div>
+
+<div class="skill-main">
+<div class="skill-progress">
+    <div class="info">
+        <p>HTML</p>
+        <p>90%</p>
+    </div>
+<div class="bar">
+    <span class="html"></span>
+</div>
+</div>
+
+<div class="skill-progress">
+    <div class="info">
+        <p>CSS</p>
+        <p>80%</p>
+    </div>
+
+<div class="bar">
+    <span class="css"></span>
+</div>
+</div> 
+
+<div class="skill-progress">
+<div class="info">
+    <p>Javascript</p>
+    <p>55%</p>
+</div>
+<div class="bar">
+<span class="js"></span>
+</div>
+</div>
+
+<div class="skill-progress">
+<div class="info">
+    <p>Figma</p>
+    <p>90%</p>
+</div>
+<div class="bar">
+<span class="figma"></span>
+</div> 
+</div>
+
+<div class="skill-progress">
+<div class="info">
+    <p>Photoshop</p>
+    <p>90%</p>
+</div>
+<div class="bar">
+<span class="ps"></span>
+</div>
+</div>
+
+<div class="skill-progress">
+<div class="info">
+    <p>Illustrator</p>
+    <p>70%</p>
+</div>
+<div class="bar">
+<span class="ai"></span>
+</div>
+</div> 
+
+<div class="skill-progress">
+<div class="info">
+    <p>python</p>
+    <p>70%</p>
+</div>
+<div class="bar">
+<span class="python"></span>
+</div>
+</div>
+
+<div class="skill-progress">
+<div class="info">
+    <p>C++</p>
+    <p>68%</p>
+</div>
+<div class="bar">
+<span class="cpp"></span>
+</div> 
+</div>
+</div>
+</section>
+<footer>
+    <div class="footercont">
+        <div class="icons">
+            <a href="https://www.facebook.com/aryan.guragain.77"><i class="fa-brands fa-facebook"></i></a>&copy;
+            <a href="https://www.instagram.com/aryan_guragain/"><i class="fa-brands fa-instagram"></i></a>&copy;
+            <a href="https://github.com/AryanGuragain"><i class="fa-brands fa-github"></i></a>&copy;
+            <a href="https://www.linkedin.com/in/aryan-guragain-57026328a/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="footernav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="myworks.html">Works</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footerbottom">
+        <p>Copyright &copy; 2024; Designed by <span class="name">ARYAN</span><br>
+        For more queries.<a href= "mailto: aryanguragain007@email.com"> Mail us</a></p>
+    </div>
+</footer>
+</body>
+</html>
+
